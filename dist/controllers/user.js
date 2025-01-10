@@ -51,6 +51,7 @@ export const newUser = async (req, res, next) => {
         }
     }
     catch (error) {
+        console.error(error);
         next(new ErrorHandler("User  signup failed", 500));
     }
 };
@@ -79,6 +80,7 @@ export const loginUser = async (req, res, next) => {
         });
     }
     catch (error) {
+        console.error(error);
         next(new ErrorHandler("User  login failed", 500));
     }
 };
@@ -113,6 +115,7 @@ export const forgetPasswordTokenSend = async (req, res, next) => {
         }
     }
     catch (error) {
+        console.error(error);
         next(new ErrorHandler("Password reset failed", 500));
     }
 };
@@ -140,6 +143,7 @@ export const forgetPassword = async (req, res, next) => {
         });
     }
     catch (error) {
+        console.error(error);
         next(new ErrorHandler("Password reset failed", 500));
     }
 };

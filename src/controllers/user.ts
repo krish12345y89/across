@@ -63,6 +63,7 @@ export const newUser  = async (
       });
     }
   } catch (error) {
+    console.error(error)
     next(new ErrorHandler("User  signup failed", 500));
   }
 };
@@ -101,6 +102,7 @@ export const loginUser  = async (
       token,
     });
   } catch (error) {
+    console.error(error)
     next(new ErrorHandler("User  login failed", 500));
   }
 };
@@ -143,6 +145,7 @@ export const forgetPasswordTokenSend = async (
       next(new ErrorHandler("Failed to send email", 500));
     }
   } catch (error) {
+    console.error(error)
     next(new ErrorHandler("Password reset failed", 500));
   }
 };
@@ -179,6 +182,7 @@ export const forgetPassword = async (
       message: "Password has been reset successfully",
     });
   } catch (error) {
+    console.error(error)
     next(new ErrorHandler("Password reset failed", 500));
   }
 };
